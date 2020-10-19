@@ -1,0 +1,62 @@
+---
+title: "Data608_Final project Proposal"
+author: "Mengqin Cai"
+date: "10/18/2020"
+output:
+  pdf_document:
+        extra_dependencies: ["geometry", "multicol", "multirow"]
+  md_document:
+    variant: markdown_github
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_collapsed: yes
+    toc_float: yes
+theme: lumen
+number_sections: yes
+toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#  DATA 608 Final Project Proposal
+
+As the largest populated city in New York and also in US, New York City has more than 8 million population. When the city keep growing, road safety is a critical issue for people who live in this crowded city.Therefore, it is very important to look at the past collision history data and see what we can learn from the data to help better prevent or avoid collisions in the future.
+
+
+#  Data Sources
+
+The dataset I used is from the New York City open data.https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95. The Motor Vehicle Collisions crash table contains details on the crash event. Each row represents a crash event. The Motor Vehicle Collisions data tables contain information from all police reported motor vehicle collisions in NYC.
+
+
+# Sample of the Data 
+
+```{r}
+data<-read.csv("https://raw.githubusercontent.com/DaisyCai2019/NewData/master/2020%20Motor_Vehicle_collision.csv")
+head(data)
+```
+
+
+The motor vehicle collision database includes the date and time, location (as borough, street names, zip code and latitude and longitude coordinates), injuries and fatalities, vehicle number and types, and related factors for all 1.7 Million collisions in New York City from 2016 until now.
+
+
+# Analysis and Visualization
+
+Because the dataset in NYC open data contains 1.7m collision cases, some of the analysis will only focus on the years of 2020, instead of from 2016 to 2019. 
+
+•	I will do some preliminary analysis to see the overall picture of the five boroughs’ accident rate changed by years. 
+
+•	I will also create a shiny app to show the viewers different collision rates according to different years, boroughs or Vehicle types. 
+
+•	The intensity of the Heatmap will show the viewers which area has the highest Vehicle collision rate, so they can be more careful when they past these areas.
+
+•	The data include the Collision Date, so I will create a graph to show the peak day of a week in terms of number of collisions
+
+
+
+
+
+
+
